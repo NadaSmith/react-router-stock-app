@@ -7,7 +7,7 @@ export default function Dasbhoard () {
         <div>
             <h2>All Stocks</h2>
             {stocks.maps((stock) => {
-                const
+                
             })}
         </div>
     )
