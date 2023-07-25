@@ -6,9 +6,13 @@ export default function Dasbhoard () {
     return (
         <div>
             <h2>All Stocks</h2>
-            {stocks.maps((stock) => {
-                
-            })}
+            <ul>
+                {stocks.map((stocks) => (
+                    <li key={stocks.symbol}>
+                        {stocks.name} - {stocks.symbol}
+                    </li>
+                ))}
+            </ul>
         </div>
     )
 }

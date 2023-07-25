@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Stock from "./pages/Stock";
 import About from "./pages/About"
-import data from './data';
+import stocks from './data';
 import Dasbhoard from './components/Dashboard';
 
 function App() {
