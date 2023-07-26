@@ -10,16 +10,18 @@ import Dashboard from './components/Dashboard';
 
 function App() {
   return (
-    <Router className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/stocks" element={<Dashboard />} />
-        <Route path="/stocks/:symbol" element={<Stock />} />
-      </Routes>
+    <Router>
+      <div className="App"> {/* Wrap the entire App content in a div */}
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/stocks" element={<div className="dashboard-container"><Dashboard /></div>} />
+          <Route path="/stocks/:symbol" element={<Stock />} />
+        </Routes>
+      </div>
     </Router>
-  );
+);
 }
 
 export default App;

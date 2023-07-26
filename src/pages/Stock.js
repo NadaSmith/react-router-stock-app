@@ -33,14 +33,14 @@ export default function Stock () {
     console.log("Stocks array:", stocks);
 
     return (
-        <div>
-            <h2>{stock.name}</h2>
-            <p>Symbol: {stock.symbol}</p>
-            <p>Last Price: {stock.lastPrice}</p>
-            <p>Change: {stock.change}</p>
-            <p>High: {stock.high}</p>
-            <p>Low: {stock.low}</p>
-            <p>Open: {stock.open}</p>
+       <div>
+                <h2>{stock.name}</h2>
+                <p>Symbol: {stock.symbol}</p>
+                <p>Last Price: {stock.lastPrice}</p>
+                <p>Change: {stock.change}</p>
+                <p>High: {stock.high}</p>
+                <p>Low: {stock.low}</p>
+                <p>Open: {stock.open}</p>
         </div>
     )
 }
