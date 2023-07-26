@@ -19,7 +19,11 @@ export default function Dasbhoard () {
                 <tbody>
                     {stocks.map((stock) => (
                         <tr key={stock.symbol} className="stock-link">
-                            <td>{stock.name}</td>
+                            <td>
+                                <Link to={`/stocks/${stock.symbol}`}>
+                                    {stock.name}
+                                </Link>
+                            </td>
                             <td>{stock.lastPrice}</td>
                             <td className={`change ${stock.change >= 0 ? "positive" : "negative"}`}>
                                 {stock.change}
