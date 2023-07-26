@@ -10,6 +10,10 @@
     font-size: 24px;
     margin-bottom: 20px;
 }
+
+table {
+    margin: auto;
+}
   
 .stock-table {
     width: 100%;
@@ -25,7 +29,15 @@
 .stock-table th {
     font-weight: bold;
 }
-  
+
+td, th {
+    padding-right: 60px;
+}
+
+td {
+    border-bottom: 1px solid black;
+}
+
 .change {
     font-weight: bold;
 }
@@ -39,6 +51,6 @@
 }
   
 .stock-link:hover {
-    background-color: #ddd;
+    background-color: yellow;
 }
   
