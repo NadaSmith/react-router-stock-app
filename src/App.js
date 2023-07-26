@@ -4,19 +4,20 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Stock from "./pages/Stock";
-import About from "./pages/About"
-import stocks from './data';
+import About from "./pages/About";
+import Data from "./components/Dashboard";
 import Dashboard from './components/Dashboard';
+
 
 function App() {
   return (
     <Router className="App">
       <Navbar />
       <Routes>
-        <Route exact path="/" component={Home} />
-        <Route path="/about" componenet={About} />
-        <Route exact path="/stocks" component={Dashboard} />
-        <Route path="/stocks: symbol" component={Stock} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/stocks" element={<Dashboard />} />
+        <Route path="/stocks: symbol" element={<Stock />} />
       </Routes>
     </Router>
   );

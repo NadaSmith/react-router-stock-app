@@ -1,7 +1,24 @@
 import React from "react";
-import stocks from "../data";
+import stocks from "../components/Data";
+//access the symbol parameter form the URL and finds the matching stock data from the imported "data" array
+import { Link, useParams } from "react-router-dom";
 
+//functional component that displays details of specific stock based on its symbol
 export default function Stock () {
+
+    //the useParam hook extracts the symbol paramater from URL; this parameter will be part of the URL defined in the Route for the Stock component in App.js
+    const { symbol } = useParams();
+
+    const stock = stock.find((s) => 
+        s.symbol === symbol
+    );
+
+    if (!stock) {
+        return  <div>
+            Stock not found
+        </div>;
+    }
+
     
     /* props.stock object
     const stock = (props) => {
@@ -14,20 +31,15 @@ export default function Stock () {
         const open = props.stock;
     }*/
 
-    //deconstructing to extract properties from props.stock
-    const Stock = (props) => {
-        const { name, symbol, lastPrice, change, high, low, open } = props.stock;
-    }
-
     return (
         <div>
-            <h2>{stocks.name}</h2>
-            <p>Symbol: {stocks.symbol}</p>
-            <p>Last Price: {stocks.lastPrice}</p>
-            <p>Change: {stocks.change}</p>
-            <p>High: {stocks.high}</p>
-            <p>Low: {stocks.low}</p>
-            <p>Open: {stocks.open}</p>
+            <h2>{stock.name}</h2>
+            <p>Symbol: {stock.symbol}</p>
+            <p>Last Price: {stock.lastPrice}</p>
+            <p>Change: {stock.change}</p>
+            <p>High: {stock.high}</p>
+            <p>Low: {stock.low}</p>
+            <p>Open: {stock.open}</p>
         </div>
     )
 }
